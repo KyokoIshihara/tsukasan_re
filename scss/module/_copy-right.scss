@@ -1,0 +1,114 @@
+@use "../global" as *;
+
+.copy-right__container{
+    width: calc(34px / 375px * 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    margin-right: 5px;
+    @include mq("md"){
+        width: vw(1366, 170);
+        align-items: flex-start;
+    }
+}
+
+
+.copy-right {
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -webkit-text-orientation: sideways;
+    text-orientation: sideways;
+    letter-spacing: 0em;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    @include mq("md"){
+        width: min(vw(1366, 30), 30px);
+        margin-left: vw(1366, 45);
+    }
+}
+
+
+.copy-right__img-container{
+    display: inline-block;
+    width: vw(375, 25);
+    height:  vw(375, 25);
+    position: relative;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    @include mq("md"){
+        width: min(vw(1366, 30), 30px);
+        height: min(vw(1366, 30), 30px);
+        margin-top: 126px;
+        margin-left: vw(1366, 45);
+        margin-bottom: max(vw(1366, -32), -32px);
+    }
+
+}
+.copy-right__img {
+    width: 100%;
+}
+
+// 波紋のアニメーション
+.copy-right__img-container::after{
+    content: "";
+    display: inline-block;
+    width: max(vw(1366, 50),50px);
+    height: max(vw(1366, 50),50px);
+    background-repeat: no-repeat;
+    background: $main-color;
+    opacity: 0.5;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: zoomIn 2s infinite;
+    z-index: -1;
+    @include mq("md"){
+        bottom: vw(1366, -11);
+        height: min(vw(1366, 60), 60px);
+        width: min(vw(1366, 60), 60px);
+
+    }
+}
+
+
+
+  /* Custom Animate.css */
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.4, .4, .4);
+        transform: translate(-50%, -50%) scale3d(.4, .4, .4);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+    transform: translate(-50%, -50%) scale3d(.4, .4, .4);
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0;
+    }
+}

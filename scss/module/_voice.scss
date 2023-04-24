@@ -1,0 +1,220 @@
+@use "../global" as *;
+
+.voice__inner {
+    padding-top: max(vw(375, 21.1), rem(21.1));
+    padding-top: 0;
+    padding-bottom: max(vw(375, 92), rem(92));
+    padding-left: 0;
+    padding-right: 0;
+    @include mq("md"){
+        padding-top: 0;
+        padding-bottom: min(vw(1366, 180), rem(180));
+    }
+    
+}
+
+.voice__slide-wrapper {
+    height: vw(375, 528.1);
+    margin-bottom: max(vw(375, 80), rem(80));
+    background-color: $sub-background;
+    padding-top: max(vw(375, 99.1), rem(99.1));
+    padding-bottom: max(vw(375, 80), rem(80));
+    position: relative;
+    z-index: 0;
+    @include mq("md"){
+        width: 100vw;
+        height: min(vw(1366, 750), rem(750));
+        margin-left: calc(50% - 50vw);
+        overflow: hidden;
+        padding-top: min(vw(1366, 163), rem(163));
+        padding-bottom: min(vw(1366, 68.78), rem(68.78));
+        margin-bottom: min(vw(1366, 80.1), rem(80.1));
+    }
+    
+}
+
+// 背景上部の文字のあしらい
+.voice__slide-wrapper::before{
+    content: "Senior Voice";
+    display: inline-block;
+    width: vw(375, 358);
+    height: vw(375, 72);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $white;
+    font-weight: bold;
+    font-size: vw(375, 50);
+    letter-spacing: 0.092em;
+    padding-left: calc(16px / 375px * 100%);
+    padding-right: calc(1px / 375px * 100%);
+    position: absolute;
+    z-index: -1;
+    top: max(vw(375, 25.1), rem(25.1));
+    @include mq("md"){
+        top: 0;
+        font-size: min(vw(1366, 120), rem(120));
+        left: calc(346.06px / $inner * 100%);
+    }
+}
+
+// 背景下部の文字のあしらい
+.voice__slide-wrapper::after{
+    content: "Senior Voice";
+    display: inline-block;
+    height: max(vw(375, 72), rem(72));
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $white;
+    font-weight: bold;
+    font-size: vw(375, 50);
+    letter-spacing: 0.092em;
+    padding-left: calc(1px / 375px * 100%);
+    padding-right: calc(16px / 375px * 100%);
+    position: absolute;
+    bottom: 0;
+    transform: scale(1,-1);
+    z-index: -1;
+    @include mq("md"){
+        display: none;
+    }
+}
+
+.voice__splide {
+    @include mq("md"){
+        height: min(vw(1366, 521.22), rem(521.22));
+    }
+}
+
+
+// スライダーの矢印の設定
+.voice__slide-prev {
+    width: max(vw(375, 24), rem(24));
+    height: max(vw(375, 24), rem(24));
+    background-image:url(../images/voice-arrow-prev.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: vw(375, 177);
+    @include mq("md"){
+        display: none;
+    }
+}
+
+.voice__slide-next {
+    width: max(vw(375, 24), rem(24));
+    height: max(vw(375, 24), rem(24));
+    background-image:url(../images/voice-arrow-next.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: vw(375, 177);
+    @include mq("md"){
+        display: none;
+    }
+}
+// 元の矢印削除
+.voice__slide-prev path {
+    display: none;
+}
+.voice__slide-next path {
+    display: none;
+}
+
+// 先輩の声スライダー
+.voice__image-container {
+    width: calc(287px / 375px * 100%);
+    margin: 0 auto;
+    aspect-ratio: 287/287.8;
+    @include mq("md"){
+        width: min(vw(1366, 220), rem(220));
+        margin: 0;
+    }
+}
+
+// 吹き出し
+.voice__slide:nth-of-type(odd) .voice__image-container::after {
+    content: "";
+    display: inline-block;
+    width: vw(375, 286.17);
+    height: vw(375,87.92);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: calc(-27.54px / 287.8px * 100%);
+    @include mq("md"){
+        width: calc(209px / 220px * 100%);
+        height: calc(97px / 220px * 100%);
+        margin-left: calc(40.06px / 220px * 100%);
+        margin-top: calc(-40px / 220px * 100%);
+    }
+}
+
+.voice__slide:nth-of-type(even) .voice__image-container {
+    @include mq("md"){
+        margin-top: min(vw(1366, 220.1), rem(220.1));
+
+    }
+}
+
+.voice__slide:nth-of-type(even) .voice__image-container::after {
+    content: "";
+    display: inline-block;
+    width: vw(375, 180);
+    height: vw(375, 197.52);
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-top: calc(-38.19px / 287.8px * 100%);
+    @include mq("md"){
+        width: calc(160px / 220px * 100%);
+        height: calc(162.44px / 220px * 100%);
+        margin-left: calc(-108.94px / 220px * 100%);
+        margin-top: calc(-81px / 220px * 100%);
+        
+    }
+}
+
+.voice__image-container1::after {
+    background-image:url(../images/img-voice-SP-baloon-01.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-01.png);
+    }
+} 
+.voice__image-container2::after {
+    background-image:url(../images/img-voice-SP-baloon-02.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-02.png);
+    }
+} 
+.voice__image-container3::after {
+    background-image:url(../images/img-voice-SP-baloon-03.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-03.png);
+    }
+} 
+.voice__image-container4::after {
+    background-image:url(../images/img-voice-SP-baloon-04.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-04.png);
+    }
+} 
+.voice__image-container5::after {
+    background-image:url(../images/img-voice-SP-baloon-05.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-05.png);
+    }
+} 
+.voice__image-container6::after {
+    background-image:url(../images/img-voice-SP-baloon-06.png);
+    @include mq("md"){
+        background-image:url(../images/img-voice-PC-baloon-06.png);
+    }
+} 
+
+
+.voice__slide img {
+    width: 100%;
+    aspect-ratio: 287/287.8;
+    // width: max(vw(375, 287), rem(287));
+    // width: 100%;
+    // height: 100%;
+    // height: max(vw(375, 287.8), rem(287.8));
+}

@@ -1,0 +1,32 @@
+@use "../global" as *;
+
+.message-title {
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: min(calc(12px / $inner * 100%), 12px);
+    }
+}
+
+.message-title__images {
+    
+    @include mq("md") {
+        width: min(vw(1366, 514), rem(514));
+        height: auto;
+        margin-right: calc(102.69px / $inner * 100%);
+    }
+}
+
+.message-title__images img {
+    width: 100%;
+    // height: 100%;
+
+    @include mq("md") {
+        aspect-ratio: 514/143;
+
+    }
+}
+
+.message-title__text {}

@@ -1,0 +1,35 @@
+@use "../global" as *;
+
+.entry-title {
+    margin-bottom: max(vw(375, 39), rem(39));
+
+    @include mq("md") {
+        // flex-direction: row;
+        justify-content: start;
+        align-items: flex-start;
+        margin-bottom: rem(80);
+        margin-left: min(vw(1366, 53), rem(53));
+    }
+}
+
+.entry-title__images {
+    width: vw(375, 211.09);
+    height: vw(375, 89);
+    margin-bottom: max(vw(375, 18), rem(18));
+
+    @include mq("md") {
+        // width: calc(382px / $inner * 100%);
+        width: min(vw(1366, 382), rem(382));
+        // height: calc(145px / $inner * 100%);
+        height: min(vw(1366, 145), rem(145));
+        margin-bottom: min(vw(1366, 14), rem(14));
+    }
+}
+
+.entry-title__text {
+    margin-bottom: 0;
+
+    @include mq("md") {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,44 @@
+@use "../global" as *;
+
+.flow-title {
+    margin-bottom: 0;
+    
+    @include mq("md") {
+        width: calc(172px / $inner * 100%);
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}
+
+.flow-title__images {
+    width: vw(375, 186);
+    margin-bottom: max(vw(375, 20), rem(20));
+    @include mq("md") {
+        all: unset;
+        width: calc(136px / 172px * 100%);
+        // margin-right: calc(20px / 172px *100%);
+    }
+}
+
+.flow-title__text {
+    padding-left: 0;
+    margin-bottom: rem(38);
+    @include mq("md") {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: rem(16);
+        margin-bottom: 0;
+        letter-spacing: 6.7px;
+    }
+}
+
+.flow-title__text::before {
+    position: static;
+    margin-right: min(vw(375, 10), 10px);
+
+    @include mq("md") {
+        margin-right: 0;
+        margin-bottom: rem(10);
+    }
+}

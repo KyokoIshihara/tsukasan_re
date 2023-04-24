@@ -1,0 +1,228 @@
+@use "../global" as *;
+
+.color {}
+
+.color__inner {
+    padding-bottom: max(vw(375, 92), rem(92));
+
+    @include mq("md") {
+        padding-bottom: rem(158);
+    }
+}
+
+.color__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // margin-bottom: rem(80);
+
+    @include mq("md") {
+        grid-column-gap: calc(39px / $inner * 100%);
+        width: 100%;
+        padding-top: min(vw(1366, 20), rem(20));
+        flex-direction: row;
+        margin-bottom: rem(154.4);
+    }
+}
+
+// 中央の赤い線
+.color__items::before {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include mq("md") {
+        content: "";
+        display: inline-block;
+        width: 1px;
+        height: 106%;
+        background-color: $main-color;
+        top: -20px;
+    }
+}
+
+.color__item-container {
+    display: contents;
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        // display: block;
+        width: calc(493px / $inner * 100%);
+    }
+}
+
+.color__item-container2 .color__item>* {
+    margin-left: 0;
+
+    @include mq("md") {
+        margin-left: rem(22);
+    }
+}
+
+.color__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid $main-color;
+    padding-bottom: max(vw(375, 59), rem(59));
+
+    @include mq("md") {
+        padding-top: rem(60);
+        padding-bottom: rem(40);
+    }
+}
+
+.color__item-container1 .color__item:nth-of-type(1) {
+    order: 0;
+
+    @include mq("md") {
+        order: unset;
+        padding-bottom: 36px;
+    }
+}
+
+
+.color__item-container1 .color__item:nth-of-type(2) {
+    order: 2;
+    padding-top: max(vw(375, 60), rem(60));
+    padding-bottom: max(vw(375, 61), rem(61));
+
+    @include mq("md") {
+        order: unset;
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+    }
+}
+
+.color__item-container2 .color__item:nth-of-type(1) {
+    order: 1;
+    padding-top: max(vw(375, 61), rem(61));
+    padding-bottom: max(vw(375, 59), rem(59));
+
+    @include mq("md") {
+        padding-top: rem(60);
+        padding-bottom: rem(60);
+        order: unset;
+    }
+
+}
+
+.color__item-container2 .color__item:nth-of-type(2) {
+    order: 4;
+    padding-bottom: max(vw(375, 62), rem(62));
+
+    @include mq("md") {
+        order: unset;
+        padding-bottom: rem(60);
+
+    }
+}
+
+.color__item-container2 .color__item:nth-of-type(3) {
+    order: 3;
+    padding-top: max(vw(375, 61), rem(61));
+    padding-bottom: max(vw(375, 61), rem(61));
+    @include mq("md") {
+        order: unset;
+        padding-top: rem(60);
+        padding-bottom: rem(54);
+    }
+
+}
+
+.color__item-container2 .color__item:nth-of-type(4) {
+    order: 5;
+    border: none;
+    padding-top: max(vw(375, 61), rem(61));
+    padding-bottom: 0;
+    margin-bottom: max(vw(375, 81), rem(81));
+    @include mq("md") {
+        padding-top: rem(60);
+        margin-bottom: 0;
+        order: unset;
+    }
+}
+
+.color__item+.color__item {
+    padding-top: max(vw(375, 59), rem(59));
+
+    @include mq("md") {
+        padding-top: rem(60);
+    }
+}
+
+.color__item-title {
+    margin-bottom: max(vw(375, 39), rem(39));
+    container-type: inline-size;
+    @include mq("md") {
+        margin-top: 0;
+        margin-bottom: rem(39);
+    }
+}
+// 310px-358pxの時だけ改行
+.color__sp_only {
+    display: none;
+    @container (310px <= width < 358px) {
+        display: block;
+    }
+}
+
+// 6つ目のタイトルの赤丸のあしらいの位置調整
+.color__item:nth-of-type(6) .color__item-title::before {
+    transform: translateY(-15px);
+
+    @include mq("md") {
+        transform: translateY(0);
+    }
+}
+
+// リモート可のタイトル
+.color__item-title--remote {
+    letter-spacing: rem(2.4);
+    @include mq("md"){
+        letter-spacing: normal;
+    }
+}
+
+.color__item-title--remote::before {
+    top: 0.6rem;
+}
+
+// リモート可のタイトルの※の補足部分
+.color__item-title--remote span {
+    font-size: rem(13);
+    margin-top: rem(11);
+    font-weight: bold;
+    letter-spacing: calc(2.4 / 13 * 1rem);
+}
+
+
+.color__images {
+    width: 100%;
+    display: block;
+    border-radius: 0 25% 0 25%;
+    margin-bottom: max(vw(375, 40), rem(40));
+
+    @include mq("md") {
+        margin-bottom: min(vw(1366, 40), rem(40));
+        width: calc(473px / 493px * 100%);
+    }
+}
+
+
+.color__images img {
+    border-radius: 0 25% 0 25%;
+}
+
+.color__sentence {
+    line-height: 175%;
+    @include mq("md") {
+        width: calc(473px / 493px * 100%);
+        margin-bottom: 0;
+        line-height: calc(28/16);
+    }
+}

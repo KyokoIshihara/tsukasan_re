@@ -1,0 +1,45 @@
+@use "../global" as *;
+
+
+.entry-button {
+    width: vw(1366, 400);
+    height: min(vw(1366, 120), 120px);
+    // height: 120px;
+}
+
+.entry-button_link {
+    width: 100%;
+    height: 100%;
+    font-size: rem(24);
+    font-weight: bold;
+    color: $white;
+    background-color: $main-color;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    // letter-spacing: 0.09em;
+    padding-top: min(vw(1366, 43), 43px);
+    padding-bottom: min(vw(1366, 44), 44px);
+    // letter-spacing: 0.01em;
+
+    @include mq("md") {
+        font-size: min(vw(1366, 24), 24px);
+        letter-spacing: 2.4px;
+        padding-left: 30px;
+        padding-left: min(vw(1366, 30), rem(30));
+        padding-top: rem(41);
+    }
+}
+
+.entry-button_link::after {
+    content: "";
+    display: block;
+    width: min(vw(1366, 21), rem(21));
+    height: min(vw(1366, 18), rem(18));
+    background-image: url('../images/arrow.png');
+    background-position: contain;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: vw(1366, 20);
+    transform: translateY(-1px);
+}

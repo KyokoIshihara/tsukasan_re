@@ -1,0 +1,24 @@
+@use "../global" as *;
+
+.submit-button__container {
+    margin-left: rem(24);
+}
+
+.submit-button__link {
+    transition: transform .5s ease, background-color .5s ease;
+    cursor: pointer;
+
+}
+
+.submit-button__link[disabled] {
+    background-color: $sub-color;
+    cursor: default;
+    border: none;
+    transform: translate(rem(-12), rem(12));
+    // transform: translate(max(-3.2vw, -0.75rem), max(3.2vw, 0.75rem));
+}
+
+.submit-button__link[disabled]:hover {
+    // transform: inherit;
+    // opacity: inherit;
+}

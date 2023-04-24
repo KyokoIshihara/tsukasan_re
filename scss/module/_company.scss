@@ -1,0 +1,109 @@
+@use "../global" as *;
+
+.company {
+    // position: relative;
+    @include mq("md"){
+        // position: static;
+        // overflow-x: hidden;
+    }
+
+}
+
+.company__inner {
+    // padding-top: max(vw(375, 78), rem(78));
+    padding-bottom: max(vw(375, 80), rem(80));
+
+    @include mq("md") {
+        padding-top: rem(76.8);
+        padding-bottom: rem(160);
+        position: relative;
+    }
+}
+
+
+.company__lists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include mq("md") {
+        width: calc(864px / $inner * 100%);
+        margin: 0 auto;
+    }
+
+}
+
+.company__list {
+    display: flex;
+    flex-direction: row;
+    // font-size: rem(13);
+    // font-size: max(vw(375, 13), rem(13));
+    padding-bottom: max(vw(375, 22), rem(22));
+    position: relative;
+    
+    @include mq("md") {
+        // font-size: min(vw(1366, 16), rem(16));
+        // font-size: rem(16);
+        padding-bottom: rem(40);
+
+    }
+}
+
+.company__list::after {
+    content: "";
+    display: inline-block;
+    width: vw(375, 343);
+    height: 4px;
+    background-image:url(../images/jobinfo-underline-SP.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+    @include mq("md"){
+        background-image:url(../images/jobinfo-underline-PC.png);
+        width: 100%;
+        max-width: 865px;
+        height: 4px;
+        
+    }
+}
+
+.company__list + .company__list {
+    margin-top: max(vw(375, 20), rem(20));
+    
+    @include mq("md") {
+        margin-top: rem(40);
+    
+    }
+
+}
+
+.company__title {
+    font-size: max(vw(375, 13), rem(13));
+    
+    font-weight: bold;
+    width: calc(95px / 343px * 100%);
+    line-height: 136%;
+    @include mq("md") {
+        // width: calc(240px / 864px * 100%);
+        width: min(vw(1366, 200), rem(200));
+        font-size: rem(16);
+        margin-left: min(vw(1366, 40), rem(40));
+        
+    }
+    
+}
+
+.company__description {
+    width: calc(248px / 343px * 100%);
+    font-size: max(vw(375, 13), rem(13));
+    line-height: 136%;
+    @include mq("md") {
+        width: calc(624px / 864px * 100%);
+        font-size: rem(16);
+        line-height: 175%;
+    }
+}
+
+

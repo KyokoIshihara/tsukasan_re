@@ -1,0 +1,67 @@
+@use "../global" as *;
+
+.entry {
+    // position: relative;
+    @include mq("md"){
+        // position: static;
+        // overflow-x: hidden;
+    }
+
+}
+
+.entry__inner {
+    width: vw(375, 343);
+    padding-top: max(vw(375, 75), rem(75));
+    padding-bottom: max(vw(375, 75), rem(75));
+    padding-left: max(vw(375, 16), rem(16));
+    border-radius: 0 40px 0 40px;
+    background-color: $white;
+    position: relative;
+    z-index: 0;
+    @include mq("md") {
+        width: 100%;
+        max-width: 1026px;
+        // width: min(vw(1366, 1026), rem(1026));
+        border-radius: 0 100px 0 100px;
+        padding-top: rem(152);
+        padding-bottom: rem(160);
+        padding-left: $padding-pc;
+        padding-right: $padding-pc;
+    }
+}
+
+// 左右下のロゴのあしらい
+.entry__inner::after{
+    content: "";
+    display: none;
+    background-image:url(../images/jobinfo-logo-SP.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 0;
+    @include mq("md"){
+        display: inline-block;
+        height: calc(159px / $inner * 100%);
+        width: calc(171px / $inner * 100%);
+        bottom: rem(-51);
+        right: 0;
+    }
+    @include mq("lg"){
+        right: -101px;
+        
+    }
+}
+
+.entry__content-container {
+    width: vw(375, 301.2);
+    @include mq("md"){
+        // width: min(vw(1366, 680), rem(680));
+        width: 100%;
+        // margin: 0 auto;
+        padding-left: min(vw(1366, 100), rem(100));
+        padding-right: min(vw(1366, 94), rem(94));
+    }
+}

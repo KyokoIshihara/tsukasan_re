@@ -1,0 +1,106 @@
+@use "../global" as *;
+
+
+.entry-form__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: rem(18);
+    @include mq("md"){
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: rem(30);
+    }
+}
+
+.entry-form__field--textarea {
+    margin-bottom: rem(35);
+    @include mq("md"){
+        align-items: center;
+        margin-bottom: rem(68);
+    }
+}
+
+.entry-form__label {
+    font-size: rem(13);
+    font-weight: bold;
+    color: #1A1A1A;
+    margin-bottom: rem(19);
+    @include mq("md"){
+        font-size: rem(16);
+        font-size: clamp(rem(13), vw(1366, 16), rem(16));
+        margin-bottom: 0;
+        margin-top: min(vw(1366, 10), rem(10));
+        margin-left: min(vw(1366, 46), rem(46));
+        position: relative;
+    }
+}
+
+.entry-form__field--textarea .entry-form__label {
+    margin-top: 0;
+}
+
+.entry-form__label span {
+    font-size: rem(13);
+    color: #E82F2A;
+    // margin-left: rem(20);
+    margin-left: vw(375, 20);
+    @include mq("md"){
+        font-size: rem(13);
+        position: absolute;
+        display: block;
+        top: 2px;
+        right: -20px;
+        transform: translateX(100%);
+        margin-left: min(vw(1366, 20), rem(20));
+    }
+}
+
+.entry-form__input-container {
+    display: contents;
+    @include mq("md"){
+        display: flex;
+        flex-direction: column;
+        width: calc(467.18px / 782px * 100%);
+        margin-right: min(vw(1366, 57), rem(57));
+        // width: rem(467.18);
+    }
+}
+
+.entry-form__input {
+    margin-bottom: rem(10);
+    height: rem(40);
+    border-color: #333333;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    @include mq("md"){
+        border-radius: 4px;
+        width: 100%;
+    }
+}
+
+.entry-form__input--postal-code {
+    width: vw(375, 199.47);
+    @include mq("md"){
+        width: min(vw(1366, 207.63), rem(207.63));
+    }
+
+}
+
+.entry-form__input--address {
+    height: rem(120);
+}
+
+.entry-form__description {
+    height: rem(240);
+}
+
+.entry-form__example {
+    color: #9B9B9B;
+    font-size: rem(13);
+    margin-bottom: rem(20);
+}
+
+// .entry-form__example span {
+// }
+

@@ -1,0 +1,81 @@
+@use "../global" as *;
+
+.basic-button {
+    display: flex;
+    justify-content: center;
+
+}
+
+.basic-button__container {
+    width: max(vw(375, 237), rem(237));
+    height: max(vw(375, 68), rem(68));
+    position: relative;
+    margin-left: max(vw(375, 8), rem(8));
+
+    @include mq("md") {
+        width: min(vw(1366, 400), rem(400));
+        height: min(vw(1366, 120), rem(120));
+        margin-bottom: rem(12);
+        margin-left: 0;
+        margin-right: -5px;
+    }
+}
+
+// ボタンのずれた枠部分
+.basic-button__container::before {
+    content: "";
+    display: inline-block;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 1px solid $black;
+    background-color: $sub-background;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    bottom: rem(-12);
+    left: rem(-12);
+
+}
+
+.basic-button__link {
+    font-size: max(vw(375, 16), rem(16));
+    padding-top: max(vw(375, 25), rem(25));
+    padding-bottom: max(vw(375, 21), rem(21));
+    border: 1px solid $black;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease;
+    padding-left: max(vw(375, 10), rem(10));
+    display: flex;
+    align-items: flex-end;
+    @include mq("md") {
+        width: 100%;
+        height: 100%;
+        font-size: min(vw(1366, 24), rem(24));
+        padding-top: min(vw(1366, 42), rem(42));
+        padding-bottom: min(vw(1366, 42), rem(40));
+        padding-left: min(vw(1366, 41), rem(41));
+    }
+}
+
+// ボタンの矢印
+.basic-button__link::after {
+    width: max(vw(375, 16), rem(16));
+    height: max(vw(375, 17), rem(17));
+    margin-right: max(vw(375, -11), rem(-11));
+    margin-left: max(vw(375, 14), rem(14));
+
+    @include mq("md") {
+        width: min(vw(1366, 21), rem(21));
+        height: min(vw(1366, 18), rem(18));
+        margin-right: unset;
+        margin-left: min(vw(1366, 41), rem(41));
+        margin-bottom: min(vw(1366, 7), rem(7));
+
+    }
+}
+
+.basic-button__link:hover {
+    transform: translate(rem(-12), rem(12));
+    opacity: 1;
+}

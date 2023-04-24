@@ -1,0 +1,138 @@
+@use "../global" as *;
+
+.pickup__inner {
+    position: relative;
+    padding-top: max(vw(375, 92), rem(92));
+    padding-bottom: max(vw(375, 155), rem(155));
+
+    @include mq("md") {
+        padding-top: rem(181);
+        padding-bottom: rem(101);
+    }
+
+}
+
+.pickup__items {
+    margin-bottom: max(vw(375, 35), rem(35));
+
+    @include mq("md") {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: min(vw(1366, 75), rem(75)); 
+    }
+}
+
+// pickupセクション右上の線のあしらい
+.pickup span:first-of-type {
+    display: inline-block;
+    width: max(vw(375, 100), rem(100));
+    height: 1px;
+    background-color: $main-color;
+    position: absolute;
+    top: calc(39px / 740px * 100%);
+    right: 0;
+
+    @include mq("md") {
+        width: min(vw(1366, 200), rem(200));
+        top: 81px;
+    }
+
+    @include mq("lg") {
+
+        right: clamp(-75px, vw(1366, -75), 0px);
+    }
+}
+
+.pickup span:first-of-type::after {
+    content: "";
+    display: inline-block;
+    width: calc(150px / 100px * 100%);
+    height: 1px;
+    background-color: $main-color;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    @include mq("md"){
+        top: 19px;
+        // right: 21px;
+    }
+
+}
+
+// pickupセクション右下のロゴのあしらい
+
+.pickup span:nth-of-type(2) {
+    display: block;
+    width: max(vw(375, 82), rem(82));
+    height: max(vw(375, 77), rem(77));
+    background-image: url(../images/pickup-SP-logo.svg);
+    background-size: contain;
+    position: absolute;
+    right: max(vw(375, 1), rem(1));
+    bottom: 0;
+
+    @include mq("md") {
+        background-image: url(../images/pickup-PC-logo.svg);
+        width: min(vw(1366, 185), rem(185));
+        height: min(vw(1366, 176), rem(176));
+    }
+
+    @include mq("lg") {
+        bottom: calc(139px / 988px * 100%);
+        right: clamp(-70px, vw(1366, -70), 0px);
+    }
+}
+
+
+// pickupセクション左下の線のあしらい
+.pickup span:last-of-type {
+    display: inline-block;
+    width: max(vw(375, 100), rem(100));
+    height: 1px;
+    background-color: $main-color;
+    position: absolute;
+    bottom: calc(92px / 741px * 100%);
+    left: 0;
+
+    @include mq("md") {
+        width: min(vw(1366, 200), rem(200));
+        bottom: 0;
+    }
+
+    @include mq("lg") {
+        left: clamp(-75px, vw(1366, -75), 0px);
+    }
+}
+
+.pickup span:last-of-type::before {
+    content: "";
+    display: inline-block;
+    width: calc(150px / 100px * 100%);
+    height: 1px;
+    background-color: $main-color;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+
+
+
+
+.pickup__movie {
+    aspect-ratio: 343/212;
+    width: 100%;
+    height: 100%;
+
+    @include mq("md") {
+        aspect-ratio: 800/494;
+        width: calc(800px / $inner * 100%);
+    }
+}
+
+.pickup__movie iframe {
+    width: 100%;
+    height: 100%;
+}

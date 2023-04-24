@@ -1,0 +1,153 @@
+@use "../global" as *;
+
+.faq__inner {
+    // padding-bottom: max(vw(375, 75.96), rem(75.96));
+    // padding-bottom: min(vw(375, 160), rem(160));
+    padding-bottom: 0;
+    @include mq("md") {
+        padding-bottom: min(vw(1366, 88), rem(88));
+    }
+}
+
+.faq__lists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include mq("md"){
+        width: 100%;
+    }
+
+}
+
+.faq__list {
+    width: 100%;
+    line-height: 136%;
+}
+
+.faq__list + .faq__list {
+    margin-top: max(vw(375, 40), rem(40));
+    @include mq("md"){
+        margin-top: 0;
+    }
+}
+
+.faq__list:not(:last-of-type) {
+    @include mq("md"){
+        margin-bottom: rem(40);
+    }
+}
+
+// QとAのデザイン
+.faq__list span {
+    display: inline-block;
+    width: min(vw(375, 21), rem(21));
+    height: min(vw(375, 25), rem(25));
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $main-color;
+    font-family: $sub-font;
+    font-size: clamp(rem(18), vw(375, 18), rem(24));
+    line-height: 1;
+    letter-spacing: 2.4px;
+    font-weight: bold;
+    margin-right: vw(375, 20);
+    margin-left: 2px;
+    @include mq("md"){
+        width: min(vw(1366, 28), rem(28));
+        height: min(vw(1366, 33), rem(33));
+        font-size: min(vw(1366, 24), rem(24));
+        margin-right: min(vw(1366, 15), rem(15));
+    }
+}
+
+
+.faq__title {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    padding-bottom: max(vw(375, 10), rem(10));
+    position: relative;
+    @include mq("md"){
+        padding-bottom: min(vw(1366, 9), rem(9));
+        align-items: center;
+    }
+}
+
+.faq__title p {
+    font-size: max(vw(375, 13), rem(13));
+    line-height: 136%;
+    @include mq("md"){
+        font-size: rem(16);
+    }
+}
+
+
+// 破線
+.faq__title::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-image:url(../images/faq-dashedline-SP.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+    @include mq("md"){
+        background-image:url(../images/faq-dashedline-PC-questrion.svg);
+    }
+}
+
+.faq__description {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-top: min(vw(375, 20), rem(20));
+    padding-bottom: max(vw(375, 10), rem(10));
+    display: none;
+    @include mq("md"){
+        width: calc(986px / $inner * 100%);
+        margin-top: min(vw(1366, 40), rem(40));
+        padding-bottom: min(vw(1366, 10), rem(10));
+        margin-bottom: min(vw(1366, 20), rem(20));
+        margin-left: min(vw(1366, 40), rem(40));
+    }
+}
+
+.faq__description p {
+    font-size: max(vw(375, 13), rem(13));
+    line-height: 136%;
+    @include mq("md"){
+        font-size: rem(16);
+    }
+}
+
+.faq__description.is-open {
+    display: flex;
+}
+
+// 破線
+.faq__description::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    background-image:url(../images/faq-dashedline-SP.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: 0;
+    @include mq("md"){
+        background-image:url(../images/faq-dashedline-PC-answer.svg);
+    }
+}
+
+
+.faq__inline-link {
+    display: inline;
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}

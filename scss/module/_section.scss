@@ -1,0 +1,240 @@
+@use "../global" as *;
+
+.section {
+    margin-bottom: min(vw(375, 80), rem(80));
+
+    @include mq("md") {
+        margin-bottom: rem(180);
+    }
+}
+
+// ファーストビュー
+.section__fv {
+    padding-bottom: min(vw(375, 80), 80px);
+    overflow: hidden;
+    margin-bottom: 0;
+
+    @include mq("md") {
+        padding-bottom: min(vw(1366, 160), 160px);
+        overflow: unset;
+        margin-bottom: 166px;
+        margin-bottom: min(vw(1366, 166), rem(166));
+    }
+}
+
+// Message
+.section__message {
+    @include mq("md") {
+        margin-bottom: rem(217);
+    }
+}
+
+// Buisiness
+.section__buisiness {
+    background-color: $sub-background;
+    position: relative;
+    z-index: -100;
+    margin-bottom: 0;
+
+    @include mq("md") {
+    }
+}
+
+// 上部背景の波線のあしらい
+.section__buisiness::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/buisiness-bg-line-SP-top.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: absolute;
+    top: 129px;
+    left: 0;
+    z-index: -99;
+
+    @include mq("md") {
+        background-image: url("../images/buisiness-bg-line-PC-top.svg");
+        top: 158px;
+    }
+}
+
+// 下部背景の波線のあしらい
+.section__buisiness::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/buisiness-bg-line-SP-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: 504px;
+    left: 0;
+    z-index: -99;
+
+    @include mq("md") {
+        background-image: url("../images/buisiness-bg-line-PC-bottom.svg");
+        bottom: -38px;
+    }
+}
+
+// PickUP
+.section__pickup {
+    margin-bottom: max(vw(375, 30.04), rem(30.04));
+    @include mq("md"){
+        margin-bottom: min(vw(1366, 70), rem(70));
+    }
+}
+
+// Color
+.section__color {
+    margin-bottom: 0;
+}
+
+// JobInfo
+.section__jobinfo {
+    position: relative;
+    margin-bottom: max(vw(375, 65), rem(65));
+    @include mq("md"){
+        margin-bottom: min(vw(1366, 59.23), rem(59.23));
+    }
+}
+// 背景上部の波線
+.section__jobinfo::before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/jobinfo-bg-line-SP-top.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: absolute;
+    top: 288px;
+    left: 0;
+    z-index: -99;
+    @include mq("md"){
+        background-image: url("../images/jobinfo-bg-line-PC-top.svg");
+        top: 164px;
+}
+}
+// 背景下部の波線
+.section__jobinfo::after{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/jobinfo-bg-line-SP-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    position: absolute;
+    bottom: 12.62px;
+    left: 0;
+    z-index: -101;
+    @include mq("md"){
+        background-image: url("../images/jobinfo-bg-line-PC-bottom.svg");
+        bottom: -248px;
+        z-index: 1;
+    }
+}
+
+// Senior Voice
+.section__voice {
+    margin-bottom: 0;
+}
+
+// FLOW 
+.section__flow{
+    position: relative;
+    margin-bottom: 0;
+}
+
+.section__flow::before {
+    display: none;
+    @include mq("md"){
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/flow-bg-line-PC-top.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top;
+        position: absolute;
+        bottom: rem(-156.2);
+        z-index: -99;
+    }
+
+}
+
+// FAQ
+.section__faq {
+    margin-bottom: rem(80);
+    width: 100%;
+    max-width: 1366px;
+    background-color: $sub-background;
+    height: 100%;
+    border-radius: 0 0 40px 40px;
+    max-width: 1366px;
+    padding-top: rem(78);
+    padding-bottom: rem(80);
+    @include mq("md"){
+        border-radius: 0 0 9% 9%;
+        margin-inline: auto;
+        padding-top: rem(85);
+    }
+}
+
+// company
+.section__company {
+    position: relative;
+    margin-bottom: 0;
+    @include mq("md"){
+    }
+}
+// 背景上部の波線
+.section__company::before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/company-bg-line-SP.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    position: absolute;
+    top: max(vw(375, 235.5), rem(235.5));
+    left: 0;
+    z-index: -99;
+    @include mq("md"){
+        background-image: url("../images/company-bg-line-PC.svg");
+        top: 159.08px;
+    }
+}
+
+// エントリー
+.section__entry {
+    background-color: $sub-background;
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+    padding-left: rem(16);
+    padding-right: rem(16);
+    background-image: radial-gradient(#f45f5fad 2px, transparent 2px);
+    background-size: 23.94px 21.34px;
+    background-position: -2.3% -0.4%;
+    background-color: $sub-background;
+    margin-bottom: 0;
+    @include mq("md"){
+        background-size: 45px 45px;
+        padding-top: rem(166);
+        padding-bottom: rem(160);
+        background-image: radial-gradient(#f45f5fad 2.3px, transparent 2.3px);
+        background-position: -1.5% -1%;
+    }
+}
+

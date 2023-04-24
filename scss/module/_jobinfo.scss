@@ -1,0 +1,147 @@
+@use "../global" as *;
+
+
+.jobinfo__inner {
+    padding-top: max(vw(375, 78), rem(78));
+    padding-bottom: max(vw(375, 228), rem(228));
+
+    @include mq("md") {
+        padding-top: rem(160);
+        padding-bottom: rem(161);
+        position: relative;
+    }
+}
+
+// 左上のグレーの背景のあしらい
+.jobinfo__inner::before{
+    content: "";
+    display: inline-block;
+    width: calc(20.3% + 50vw);
+    height: max(vw(375, 745), rem(745));
+    background-color: $sub-background;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    @include mq("md"){
+        height: rem(1075);
+        width: calc(12% + 50vw);
+        margin-left: calc(50% - 50vw);
+    }
+}
+
+// 左右下のロゴのあしらい
+.jobinfo__inner::after{
+    content: "";
+    display: inline-block;
+    width: vw(375, 171);
+    // width: calc(171px / 343px * 100%);
+    height: vw(375, 159);
+    // height: calc(159px / 343px * 100%);
+    background-image:url(../images/jobinfo-logo-SP.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    z-index: 0;
+    bottom: rem(32);
+    right: rem(17);
+    @include mq("md"){
+        height: calc(159px / $inner * 100%);
+        width: 16%;
+        right: 0;
+    }
+    @include mq("lg"){
+        bottom: rem(58);
+        right: -79px;
+        
+    }
+}
+
+
+.jobinfo__lists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+
+    @include mq("md") {
+        width: calc(864px / $inner * 100%);
+        margin: 0 auto;
+    }
+
+}
+
+.jobinfo__list {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: max(vw(375, 21), rem(21));
+    position: relative;
+    @include mq("md") {
+        padding-bottom: rem(41);
+
+    }
+}
+// リストの破線
+.jobinfo__list::after {
+    content: "";
+    display: inline-block;
+    // width: vw(375, 343);
+    width: 100%;
+    height: 4px;
+    background-image:url(../images/jobinfo-underline-SP.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    @include mq("md"){
+        background-image:url(../images/jobinfo-underline-PC.png);
+        // width: 100%;
+        max-width: 865px;
+        height: 4px;
+        
+    }
+}
+
+.jobinfo__list + .jobinfo__list {
+    margin-top: max(vw(375, 22), rem(22));
+    
+    @include mq("md") {
+        margin-top: rem(40);
+    
+    }
+
+}
+
+.joblist__title {
+    font-weight: bold;
+    width: calc(95px / 343px * 100%);
+    font-size: max(vw(375, 13), rem(13));
+    line-height: 135%;
+    @include mq("md") {
+        width: calc(200px / 864px * 100%);
+        font-size: min(vw(1366, 16), rem(16));
+        margin-left: min(vw(1366, 40), rem(40));
+    }
+    
+}
+
+.joblist__description {
+    width: calc(248px / 343px * 100%);
+    font-size: max(vw(375, 13), rem(13));
+    line-height: 135%;
+    @include mq("md") {
+        width: calc(624px / 864px * 100%);
+        font-size: min(vw(1366, 16), rem(16));
+        line-height: 175%;
+
+    }
+}
+
+

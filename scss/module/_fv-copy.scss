@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+.fv-copy__container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    // overflow: hidden;
+    @include mq("md"){
+        max-height: 645px;
+        height: 100%;
+        justify-content: space-between;
+        
+    }
+    
+}
+
+
+
+.fv-copies {
+    position: relative;
+    z-index: 0;
+    width: calc(339px / 375px * 100%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 31px;
+    padding-bottom: 37px;
+    padding-right: vw(375, 15);
+    @include mq("md"){
+        width: vw(1366, 1196);
+        height: vw(1366, 645);
+        padding-top: 0;
+        padding-right: 0;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding-bottom: min(vw(1366, 22), 22px);
+
+    }
+}
+
+.fv-copy{
+    font-size: vw(375, 100);
+    display: inline-block;
+    vertical-align: bottom; 
+    font-weight: bold;
+    color: $main-color;
+    margin-top: -7px;
+    line-height: 1;
+    @include mq("md"){
+        font-feature-settings: initial;
+        font-size: min(120px, vw(1366, 120));
+        
+    }
+}
+
+.fv-copy__pc-only {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 60.9%;
+    @include mq("md"){
+        flex-direction: row;
+        height: min(vw(1366, 119),119px);
+    }
+}
+
+
+.fv-copy1{
+    display: inline-block;
+    letter-spacing: 0.2em;
+    margin-right: -0.4em;
+    transform: translate(-6%, 1%);
+    @include mq("md"){
+        writing-mode: vertical-rl;
+        letter-spacing: 0.14em;
+        margin: 0;
+        transform: translateY(8px);
+    }
+}
+
+// .fv-copy1::first-letter {
+//     font-size: vw(375, 102);
+// }
+
+.fv-copy2{
+    display: block;
+    letter-spacing: 0.1em;
+    margin-right: calc(-10em / 100);
+    @include mq("md"){
+        letter-spacing: 0.2em;
+        margin: 0;
+    }
+}
+
+.fv-copy3{
+    display: block;
+    letter-spacing: 0.21em;
+    margin-left: -1.4em;
+    transform: translate(5.5%, -1%);
+    @include mq("md"){
+        letter-spacing: 0.1em;
+        margin: 0;
+        transform: translate(-13px, 0px);
+    }
+}
+

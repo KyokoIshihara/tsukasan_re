@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+.buisiness-title {
+    justify-content: flex-start;
+    margin-bottom: rem(1);
+
+    @include mq("md") {
+        flex-direction: row;
+        gap: rem(109);
+        margin-bottom: rem(64);
+    }
+
+
+}
+
+.buisiness-title__images {
+    width: vw(375, 336);
+    height: vw(375, 101);
+    margin-bottom: rem(7);
+    
+    @include mq("md") {
+        width: calc(540px / $inner * 100%);
+        height: calc(142px / $inner * 100%);
+        margin-bottom: rem(9);
+    }
+}
+
+.buisiness-title img {
+    aspect-ratio: 336/101;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+
+    @include mq("md") {
+        aspect-ratio: 540/142;
+    }
+}

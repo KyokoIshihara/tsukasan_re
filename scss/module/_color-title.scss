@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+
+.color-title {
+    margin-bottom: 0;
+
+    @include mq("md") {
+        align-items: flex-start;
+    }
+}
+
+.color-title__images {
+    width: vw(375, 208);
+    height:vw(375, 87);
+    margin-bottom: max(vw(375, 16), rem(16));
+
+    @include mq("md") {
+        width: calc(354px / $inner * 100%);
+        height: calc(143px / $inner * 100%);
+        margin-bottom: 0;
+    }
+
+}
+
+.color-title__text {
+    @include mq("md") {
+        margin-bottom: 0;
+    }
+}

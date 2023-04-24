@@ -1,0 +1,50 @@
+@use "../global" as *;
+
+.thanks__body {
+    // overflow: hidden;
+}
+
+.section__thanks {
+    height: 100vh;
+
+}
+
+
+
+.thanks__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.thanks__message-container {
+    width: 100%;
+    padding-top: 79px;
+    padding-bottom: 80px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include mq("md"){
+        align-items: flex-start;
+    }
+}
+
+.thanks__message {
+    margin-bottom: 65.5px;
+}
+
+
+.thanks__logo {
+    width: 100%;
+    height: 63px;
+    text-align: center;
+}
+
+.thaks__logo-link {
+    width: 72.47px;
+    display: inline-block;
+}
+

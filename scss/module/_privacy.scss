@@ -1,0 +1,49 @@
+@use "../global" as *;
+
+.privacy__description {
+    display: inline-block;
+    font-size: rem(13);
+    margin-bottom: rem(25);
+    @include mq("md"){
+        width: 100%;
+        font-size: clamp(rem(13), vw(1366, 16), rem(16));
+        margin-bottom: rem(40);
+        text-align: center;
+        letter-spacing: 0.4px;
+    }
+}
+
+.privacy__container {
+    margin-bottom: rem(80);
+    display: flex;
+    justify-content: center;
+    @include mq("md"){
+        margin-bottom: rem(79.8);
+    }
+}
+
+.privacy__link {
+    font-size: rem(13);
+    display: inline;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    @include mq("md"){
+        text-underline-offset: 7px;
+        font-size: clamp(rem(13), vw(1366, 16), rem(16));
+
+    }
+}
+
+.privacy__checkbox {
+    transform: scale(1.5);
+}
+
+.privacy__checkbox--sentence {
+    margin-left: rem(10.15);
+    font-size: rem(13);
+    @include mq("md"){
+        font-size: rem(16);
+        letter-spacing: 1.3px;
+        margin-left: rem(18);
+    }
+}

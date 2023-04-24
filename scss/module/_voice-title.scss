@@ -1,0 +1,31 @@
+@use "../global" as *;
+
+.voice-title {
+    margin-top: rem(-59);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+    @include mq("md"){
+        align-items: flex-start;
+    }
+}
+
+.voice-title__images {
+    width: vw(375, 224.62);
+    height: vw(375, 118.21);
+    margin-bottom: rem(-58.9);
+    margin-left: vw(375, 16);
+    @include mq("md"){
+        width: calc(402.51px / 1076px * 100%);
+        height: calc(211.82px / 1076px * 100%);
+        margin-bottom: rem(-112.1);
+    }
+    @include mq("lg"){
+        margin-left: rem(13);
+    }
+
+}
+
+.voice-title__images img{
+}
+

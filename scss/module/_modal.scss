@@ -1,0 +1,139 @@
+@use "../global" as *;
+
+/* モーダル */
+.modal-overlay {
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.modal-container {
+    background-color: #fff;
+    max-height: 80vh;
+    width: vw(1366, 1094);
+    max-width: 1094px;
+    overflow-y: auto;
+    padding: 20px;
+    @include mq("md"){
+        padding: 40px;
+        }
+}
+
+::-webkit-scrollbar {
+
+}
+
+::-webkit-scrollbar-track {
+
+}	
+::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+}
+
+
+
+.modal-header {
+align-items: center;
+display: flex;
+justify-content: space-between;
+}
+
+.modal-close {
+background: transparent;
+border: 0;
+}
+
+.modal-content {
+line-height: 1.5;
+}
+
+.modal-open {
+display: inline-block;
+}
+
+.box01 {
+background-color: #ccc;
+height: 200px;
+margin: 0 auto;
+width: 80%;
+}
+
+.box02 {
+background-color: #ccc;
+height: 200px;
+margin: 0 auto;
+width: 80%;
+}
+
+/* モーダルアニメーション */
+@keyframes mmfadeIn {
+from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+@keyframes mmfadeOut {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+@keyframes mmslideIn {
+from {
+    transform: translateY(15%);
+}
+to {
+    transform: translateY(0);
+}
+}
+
+@keyframes mmslideOut {
+from {
+    transform: translateY(0);
+}
+to {
+    transform: translateY(-10%);
+}
+}
+
+.micromodal-slide {
+display: none;
+}
+
+.micromodal-slide.is-open {
+display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal-overlay {
+animation: mmfadeIn .3s cubic-bezier(.0, .0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal-container {
+animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-overlay {
+animation: mmfadeOut .3s cubic-bezier(.0, .0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal-container {
+animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal-container,
+.micromodal-slide .modal-overlay {
+will-change: transform;
+}

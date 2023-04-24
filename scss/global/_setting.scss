@@ -1,0 +1,87 @@
+@use "sass:math";
+/*================================================================
+# インナー幅の設定
+================================================================ */
+// コンテンツ幅
+$inner : 1026px;
+
+// 余白PC
+$padding-pc: 25px;
+// SP
+$padding-sp: 16px;
+
+
+/*================================================================
+# デザインカンプ幅に関する設定
+================================================================ */
+
+$SP-width : 375px;
+$PC-width : 1366px;
+
+/*================================================================
+# 色に関する設定
+================================================================ */
+
+$black: #333333;
+$white: #FCFCFC;
+$main-color: #F45F5F;
+$sub-color: #CECDCD;
+$sub-background: #F4F4F4;
+
+body {
+    color: $black;
+}
+
+/*================================================================
+# フォントの設定
+================================================================ */
+// 基本のフォント
+
+$base-font: 'Noto Sans JP', sans-serif;
+$sub-font: 'Noto Sans', sans-serif;
+
+body {
+    font-family: $base-font;
+}
+
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+/*================================================================
+# メディアクエリとブレイクポイント
+================================================================ */
+
+$breakpoints: (
+    md: 768,
+    lg: 1226,
+);
+
+$mediaquerys: (
+    md: "screen and (min-width: #{map-get($breakpoints, 'md')}px)",
+    lg: "screen and (min-width: #{map-get($breakpoints, 'lg')}px)",
+);
+
+// @include mq (){}でブレイクポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+    @media #{map-get($mediaquerys, $mediaquery)} {
+        @content;
+    }
+}
+
+// PCとSPの表示・非表示の切り替え
+// (md)px以上で表示
+.pc_only {
+    display: none;
+    @include mq("md") {
+        display: block;
+    }
+}
+
+// モバイルのみ表示
+.sp_only {
+    display: block;
+    @include mq("md") {
+        display: none;
+    }
+}

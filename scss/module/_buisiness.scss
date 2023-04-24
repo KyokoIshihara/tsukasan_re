@@ -1,0 +1,114 @@
+@use "../global" as *;
+
+.buisiness__inner {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+
+    @include mq("md") {
+        padding-top: rem(128);
+        // padding-bottom: rem(160);
+    }
+}
+
+.buisiness__items {
+    
+    @include mq("md") {
+
+        margin-bottom: rem(80);
+    }
+}
+
+.buisiness__item {
+    display: grid;
+    @include mq("md") {
+        margin-bottom: rem(80);
+        grid-template-columns: calc(445px / $inner * 100%) calc(512px / $inner * 100%);
+        grid-template-rows: 1fr auto auto;
+        grid-column-gap: calc(69px / $inner * 100%);
+    }
+}
+
+.buisiness__item:not(:last-of-type) {
+    margin-bottom: rem(81);
+}
+
+
+.buisiness__item>* {
+    align-self: flex-end;
+}
+
+.buisiness__item-title {
+    @include mq("md") {
+        grid-area: 1 / 2 / 2 / 3;
+        margin: 0 0 rem(40) 0;
+    }
+}
+
+.buisiness__images {
+    border-radius: 0 25% 0 0;
+    width: 100%;
+    aspect-ratio: 343/257;
+    position: relative;
+    z-index: 0;
+
+    @include mq("md") {
+        aspect-ratio: 445/334;
+        grid-area: 1 / 1 / 3 / 2;
+    }
+}
+
+.buisiness__images img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 343/257;
+    border-radius: 0 25% 0 0;
+    margin-bottom: 40px;
+
+    @include mq("md") {
+        aspect-ratio: 445/334;
+        margin-bottom: 0;
+    }
+}
+
+.buisiness__sentence {
+    line-height: 175%;
+    overflow-wrap: break-word;
+    @include mq("md") {
+        grid-area: 2 / 2 / 3 / 3;
+        line-height: calc(28/16);
+        margin-bottom: -7px;
+    }
+}
+
+
+// 偶数番目の設定
+.buisiness__item:nth-of-type(even) {
+    @include mq("md") {
+        grid-template-columns: calc(512px / $inner * 100%) calc(445px / $inner * 100%);
+
+    }
+}
+
+.buisiness__item:nth-of-type(even) .buisiness__item-title {
+    @include mq("md") {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+}
+
+.buisiness__item:nth-of-type(even) .buisiness__images {
+    @include mq("md") {
+        border-radius: 25% 0 0 0;
+        grid-area: 1 / 2 / 3 / 3;
+    }
+}
+
+.buisiness__item:nth-of-type(even) .buisiness__images img {
+    border-radius: 25% 0 0 0;
+}
+
+.buisiness__item:nth-of-type(even) .buisiness__sentence {
+    @include mq("md") {
+        grid-area: 2 / 1 / 3 / 2;
+    }
+}

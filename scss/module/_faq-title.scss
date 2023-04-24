@@ -1,0 +1,43 @@
+@use "../global" as *;
+
+.faq-title {
+    margin-bottom: 0;
+    
+    @include mq("md") {
+        width: calc(262px / $inner * 100%);
+        align-items: flex-start;
+        // margin-left: calc(21px / $inner * 100%);
+        margin-bottom: min(vw(1366, 87), rem(87));
+
+    }
+}
+
+.faq-title__images {
+    width: vw(375, 159);
+    margin-bottom: max(vw(375, 16), rem(16));
+    @include mq("md") {
+        width: 100%;
+        height: unset;
+        margin-bottom: rem(20);
+    }
+}
+
+.faq-title__text {
+    font-size: rem(18);
+    @include mq("md") {
+        font-size: rem(24);
+        margin: 0;
+        padding-left: 0;
+        
+    }
+}
+
+.faq-title__text::before {
+    margin-right: min(vw(375, 10), 10px);
+    @include mq("md") {
+        margin-right: min(vw(1366, 10), rem(10));
+        position: static;
+        // margin-bottom: rem(10);
+    }
+}
+
