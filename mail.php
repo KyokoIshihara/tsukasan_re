@@ -295,6 +295,11 @@ p.error_messe{
 	width:95%;
 	margin:0 auto;
 }
+
+h3 {
+
+}
+
 table.formTable th, table.formTable td {
 	width:auto;
 	display:block;

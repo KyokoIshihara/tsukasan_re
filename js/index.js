@@ -27,11 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =================================================== */
     const hamburgerBtn = document.querySelector('.js-hamburger');
     const header = document.querySelector('.js-header-toggle');
-    // const nav = document.querySelector('.js-header-nav');
 
     //ハンバーガーメニューがクリックされた時、ナビが開いている時はスクロール不可
     hamburgerBtn.addEventListener('click', scrollSet);
-
 
     /* =================================================== */
     // スムーススクロール

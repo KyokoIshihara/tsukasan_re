@@ -73,6 +73,7 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 3px;
+    padding: 10px;
     @include mq("md"){
         border-radius: 4px;
         width: 100%;
@@ -89,10 +90,12 @@
 
 .entry-form__input--address {
     height: rem(120);
+    font-family: inherit;
 }
 
 .entry-form__description {
     height: rem(240);
+    font-family: inherit;
 }
 
 .entry-form__example {
