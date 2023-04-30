@@ -888,7 +888,6 @@ address {
 .section__faq {
   margin-bottom: 5rem;
   width: 100%;
-  max-width: 1366px;
   background-color: #F4F4F4;
   height: 100%;
   border-radius: 0 0 40px 40px;
@@ -901,6 +900,7 @@ address {
     border-radius: 0 0 9% 9%;
     margin-inline: auto;
     padding-top: 5.3125rem;
+    max-width: 100vw;
   }
 }
 
@@ -2446,8 +2446,8 @@ address {
   .flow__list::after {
     width: min(0.9882869693vw, 0.84375rem);
     height: min(0.9882869693vw, 0.84375rem);
-    top: 5.866667vw;
-    left: 2.133333vw;
+    top: min(5.866667vw, 80.1387px);
+    left: min(2.133333vw, 29.1413px);
   }
 }
 

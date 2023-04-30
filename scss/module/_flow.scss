@@ -131,8 +131,8 @@
     @include mq("md"){
         width: min(vw(1366, 13.5), rem(13.5));
         height: min(vw(1366, 13.5), rem(13.5));
-        top: 5.866667vw;
-        left: 2.133333vw;
+        top: min(5.866667vw, 80.1387px);
+        left: min(2.133333vw, 29.1413px);
     }
 }
 
