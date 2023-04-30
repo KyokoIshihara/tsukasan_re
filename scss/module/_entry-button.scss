@@ -17,17 +17,13 @@
     display: flex;
     align-items: baseline;
     justify-content: center;
-    // letter-spacing: 0.09em;
     padding-top: min(vw(1366, 43), 43px);
     padding-bottom: min(vw(1366, 44), 44px);
-    // letter-spacing: 0.01em;
-
     @include mq("md") {
         font-size: min(vw(1366, 24), 24px);
         letter-spacing: 2.4px;
         padding-left: 30px;
         padding-left: min(vw(1366, 30), rem(30));
-        padding-top: rem(41);
     }
 }
 

@@ -409,7 +409,6 @@ address {
     letter-spacing: 2.4px;
     padding-left: 30px;
     padding-left: min(2.196193265vw, 1.875rem);
-    padding-top: 2.5625rem;
   }
 }
 
