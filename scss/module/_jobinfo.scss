@@ -126,7 +126,7 @@
     line-height: 135%;
     @include mq("md") {
         width: calc(200px / 864px * 100%);
-        font-size: min(vw(1366, 16), rem(16));
+        font-size: rem(16);
         margin-left: min(vw(1366, 40), rem(40));
     }
     
@@ -138,7 +138,7 @@
     line-height: 135%;
     @include mq("md") {
         width: calc(624px / 864px * 100%);
-        font-size: min(vw(1366, 16), rem(16));
+        font-size: rem(16);
         line-height: 175%;
 
     }

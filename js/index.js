@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
             speed: 1,
         },
         breakpoints: {
-            768: {
+            767: {
                 arrows: true,
                 perPage: 1,
             },

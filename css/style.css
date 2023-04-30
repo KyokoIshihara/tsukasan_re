@@ -1935,7 +1935,7 @@ address {
 @media screen and (min-width: 768px) {
   .joblist__title {
     width: 23.1481481481%;
-    font-size: min(1.1713030747vw, 1rem);
+    font-size: 1rem;
     margin-left: min(2.9282576867vw, 2.5rem);
   }
 }
@@ -1948,7 +1948,7 @@ address {
 @media screen and (min-width: 768px) {
   .joblist__description {
     width: 72.2222222222%;
-    font-size: min(1.1713030747vw, 1rem);
+    font-size: 1rem;
     line-height: 175%;
   }
 }
