@@ -417,8 +417,8 @@
         <div class="inner voice__inner">
           <h2 class="title voice-title">
             <picture class="title__images voice-title__images">
-              <source srcset="./images/title_voice_PC.png" media="(min-width:768px)" width="402.51" height="211.82">
-              <img src="./images/title_voice_SP.png" alt="先輩の声" width="224.62" height="118.21" loading="lazy">
+              <source srcset="./images/title_voice_PC.png" media="(min-width:768px)" width="402" height="212">
+              <img src="./images/title_voice_SP.png" alt="先輩の声" width="225" height="118" loading="lazy">
             </picture>
           </h2>
           <div class="voice__slide-wrapper">
@@ -428,32 +428,32 @@
                 <ul class="splide__list">
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container1">
-                      <img class="voice__img" src="./images/img-voice-01.png" alt="自分が成長できる環境！みんな行動量がバクってて楽しい！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-01.png" alt="自分が成長できる環境！みんな行動量がバクってて楽しい！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container2">
-                      <img class="voice__img" src="./images/img-voice-02.png" alt="ちゃんと休みが取れるからプライベートも充実！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-02.png" alt="ちゃんと休みが取れるからプライベートも充実！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container3">
-                      <img class="voice__img" src="./images/img-voice-03.png" alt="福利厚生がしっかりしているので、育休明けも働きやすい！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-03.png" alt="福利厚生がしっかりしているので、育休明けも働きやすい！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container4">
-                      <img class="voice__img" src="./images/img-voice-04.png" alt="色々な人と関われ、知らなかった自分を発掘できた！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-04.png" alt="色々な人と関われ、知らなかった自分を発掘できた！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container5">
-                      <img class="voice__img" src="./images/img-voice-05.png" alt="お客様からの『有り難う』が嬉しい！直接聞けることも嬉しい！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-05.png" alt="お客様からの『有り難う』が嬉しい！直接聞けることも嬉しい！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                   <li class="splide__slide voice__slide">
                     <div class="voice__image-container voice__image-container6">
-                      <img class="voice__img" src="./images/img-voice-06.png" alt="副業OK！ブログもイラストもせどりもOK！" width="287" height="287.8" loading="lazy">
+                      <img class="voice__img" src="./images/img-voice-06.png" alt="副業OK！ブログもイラストもせどりもOK！" width="287" height="288" loading="lazy">
                     </div>
                   </li>
                 </ul>
@@ -534,7 +534,7 @@
               <h2 class="title__text faq-title__text">よくある質問</h2>
             </div>
             <dl class="faq__lists js-accordion" itemscope itemtype="https://schema.org/FAQPage">
-              <div class="faq__list js-accordion-trigger" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" is-active>
+              <div class="faq__list js-accordion-trigger is-active" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                 <dt class="faq__title">
                   <span>Q,</span>
                   <p itemprop="name">既卒の応募は可能ですか？</p>
@@ -690,9 +690,9 @@
               <div class="entry-form__field">
                 <label class="entry-form__label entry-form__label--required" for="entry-address">住所<span>必須</span></label>
                 <div class="entry-form__input-container">
-                  <input class="entry-form__input entry-form__input--postal-code p-postal-code" id="postal_code" type="text" name="郵便番号"required/>
+                  <input class="entry-form__input entry-form__input--postal-code p-postal-code" id="postal_code" type="text" name="郵便番号" required/>
                   <label class="entry-form__example" for="postal_code">例）〒111-1111</label>
-                  <textarea class="entry-form__input entry-form__input--address p-region p-locality p-street-address p-extended-address" id="entry-address" type="text" name="住所" rows="3" required></textarea>
+                  <textarea class="entry-form__input entry-form__input--address p-region p-locality p-street-address p-extended-address" id="entry-address" name="住所" rows="3" required></textarea>
                   <label class="entry-form__example" for="entry-address">例）福岡県〇〇市〇〇1-1-1　〇〇コーポ111</label>
                 </div>
               </div>
@@ -713,7 +713,7 @@
               <div class="entry-form__field">
                 <label class="entry-form__label entry-form__label--required" for="emailForCheck">メールアドレス<br class="pc_only">（確認）<span>必須</span></label>
                 <div class="entry-form__input-container">
-                  <input class="entry-form__input" id="emailForCheck" type="emailForCheck" name="メールアドレス（確認）" required/>
+                  <input class="entry-form__input" id="emailForCheck" type="Email" name="メールアドレス（確認）" required/>
                   <label class="entry-form__example" for="emailForCheck">例）THUKASAN@sansan.co.jp</label>
                 </div>
               </div>
