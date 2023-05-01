@@ -11,6 +11,7 @@ address {
 
 *:focus {
 	@include mq("md"){
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
 		outline: none;
 	}
 }
