@@ -8,3 +8,9 @@ main {
 address {
 	font-style: normal;
 }
+
+*:focus {
+	@include mq("md"){
+		outline: none;
+	}
+}

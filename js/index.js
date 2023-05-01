@@ -269,4 +269,5 @@ document.addEventListener('DOMContentLoaded', function () {
         awaitOpenAnimation: true,
         awaitCloseAnimation: true
     });
+
 });
