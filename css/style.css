@@ -592,7 +592,7 @@ address {
 .fv-copy1 {
   display: inline-block;
   letter-spacing: 0.2em;
-  margin-right: -0.4em;
+  margin-right: -0.5em;
   transform: translate(-6%, 1%);
 }
 @media screen and (min-width: 768px) {

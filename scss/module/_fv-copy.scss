@@ -73,7 +73,7 @@
 .fv-copy1{
     display: inline-block;
     letter-spacing: 0.2em;
-    margin-right: -0.4em;
+    margin-right: -0.5em;
     transform: translate(-6%, 1%);
     @include mq("md"){
         writing-mode: vertical-rl;
@@ -82,10 +82,6 @@
         transform: translateY(8px);
     }
 }
-
-// .fv-copy1::first-letter {
-//     font-size: vw(375, 102);
-// }
 
 .fv-copy2{
     display: block;
