@@ -10,8 +10,10 @@ address {
 }
 
 *:focus {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	outline: none;
 	@include mq("md"){
-		-webkit-tap-highlight-color: rgba(0,0,0,0);
-		outline: none;
+		outline: auto;
 	}
+
 }
