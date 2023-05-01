@@ -2612,7 +2612,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .faq__title::after {
-    background-image: url(../images/faq-dashedline-PC-questrion.svg);
+    background-image: url(../images/faq-dashedline-PC-questrion.png);
   }
 }
 
@@ -2662,7 +2662,7 @@ address {
 }
 @media screen and (min-width: 768px) {
   .faq__description::after {
-    background-image: url(../images/faq-dashedline-PC-answer.svg);
+    background-image: url(../images/faq-dashedline-PC-answer.png);
   }
 }
 

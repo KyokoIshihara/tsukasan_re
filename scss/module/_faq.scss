@@ -95,7 +95,7 @@
     position: absolute;
     bottom: 0;
     @include mq("md"){
-        background-image:url(../images/faq-dashedline-PC-questrion.svg);
+        background-image:url(../images/faq-dashedline-PC-questrion.png);
     }
 }
 
@@ -140,7 +140,7 @@
     position: absolute;
     bottom: 0;
     @include mq("md"){
-        background-image:url(../images/faq-dashedline-PC-answer.svg);
+        background-image:url(../images/faq-dashedline-PC-answer.png);
     }
 }
 
