@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // // リダイレクト
     // location.replace(newUrl);
-}
+    // }
 
     /* =================================================== */
     // スクロールのon,off切り替えの関数
