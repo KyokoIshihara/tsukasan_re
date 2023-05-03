@@ -1,12 +1,5 @@
 @use "../global" as *;
 
-.message__inner {
-    @include mq("md") {
-        // padding-left: calc($padding-pc *2);
-
-    }
-}
-
 .message__items {
     display: flex;
     flex-direction: column;

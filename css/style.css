@@ -123,6 +123,15 @@ address {
   }
 }
 
+.header__logo-link:hover {
+  opacity: unset;
+}
+@media screen and (min-width: 768px) {
+  .header__logo-link:hover {
+    opacity: 0.8;
+  }
+}
+
 .header__logo-img {
   width: 100%;
 }
@@ -594,6 +603,7 @@ address {
   letter-spacing: 0.2em;
   margin-right: -0.5em;
   transform: translate(-6%, 1%);
+  white-space: nowrap;
 }
 @media screen and (min-width: 768px) {
   .fv-copy1 {
@@ -3115,6 +3125,7 @@ address {
 .submit-button__link {
   transition: transform 0.5s ease, background-color 0.5s ease;
   cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .submit-button__link[disabled] {

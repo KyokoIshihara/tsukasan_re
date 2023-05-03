@@ -39,11 +39,9 @@
 .fv__pagination--custom {
     position: static;
     padding-top: 5px;
-    // padding-bottom: 5px;
     @include mq("md"){
         flex-direction: column;
         padding: 0;
-        // width: calc(30px / 1366px * 100%);
         width: min(vw(1366, 30), 30px);
         margin-left: vw(1366, 45);
         margin-bottom: max(vw(1366, -2), -2px);
@@ -57,10 +55,8 @@
     background-color: #F45F5F;
     opacity: .6;
     @include mq("md"){
-        // width: 13px;
         width: min(vw(1366, 13), 13px);
         height: min(vw(1366, 13), 13px);
-        // margin: 10px 6px;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: min(vw(1366, 8.5), 8.5px);

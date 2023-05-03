@@ -1,16 +1,6 @@
 @use "../global" as *;
 
-.company {
-    // position: relative;
-    @include mq("md"){
-        // position: static;
-        // overflow-x: hidden;
-    }
-
-}
-
 .company__inner {
-    // padding-top: max(vw(375, 78), rem(78));
     padding-bottom: max(vw(375, 80), rem(80));
 
     @include mq("md") {
@@ -36,14 +26,10 @@
 .company__list {
     display: flex;
     flex-direction: row;
-    // font-size: rem(13);
-    // font-size: max(vw(375, 13), rem(13));
     padding-bottom: max(vw(375, 22), rem(22));
     position: relative;
     
     @include mq("md") {
-        // font-size: min(vw(1366, 16), rem(16));
-        // font-size: rem(16);
         padding-bottom: rem(40);
 
     }
@@ -86,7 +72,6 @@
     width: calc(95px / 343px * 100%);
     line-height: 136%;
     @include mq("md") {
-        // width: calc(240px / 864px * 100%);
         width: min(vw(1366, 200), rem(200));
         font-size: rem(16);
         margin-left: min(vw(1366, 40), rem(40));

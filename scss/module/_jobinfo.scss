@@ -37,9 +37,7 @@
     content: "";
     display: inline-block;
     width: vw(375, 171);
-    // width: calc(171px / 343px * 100%);
     height: vw(375, 159);
-    // height: calc(159px / 343px * 100%);
     background-image:url(../images/jobinfo-logo-SP.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,7 +89,6 @@
 .jobinfo__list::after {
     content: "";
     display: inline-block;
-    // width: vw(375, 343);
     width: 100%;
     height: 4px;
     background-image:url(../images/jobinfo-underline-SP.png);
@@ -102,7 +99,6 @@
     bottom: 0;
     @include mq("md"){
         background-image:url(../images/jobinfo-underline-PC.png);
-        // width: 100%;
         max-width: 865px;
         height: 4px;
         

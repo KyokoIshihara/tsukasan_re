@@ -1,8 +1,6 @@
 @use "../global" as *;
 
 .faq__inner {
-    // padding-bottom: max(vw(375, 75.96), rem(75.96));
-    // padding-bottom: min(vw(375, 160), rem(160));
     padding-bottom: 0;
     @include mq("md") {
         padding-bottom: min(vw(1366, 88), rem(88));

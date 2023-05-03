@@ -4,7 +4,6 @@
     margin-bottom: max(vw(375, 39), rem(39));
 
     @include mq("md") {
-        // flex-direction: row;
         justify-content: start;
         align-items: flex-start;
         margin-bottom: rem(80);
@@ -18,9 +17,7 @@
     margin-bottom: max(vw(375, 18), rem(18));
 
     @include mq("md") {
-        // width: calc(382px / $inner * 100%);
         width: min(vw(1366, 382), rem(382));
-        // height: calc(145px / $inner * 100%);
         height: min(vw(1366, 145), rem(145));
         margin-bottom: min(vw(1366, 14), rem(14));
     }

@@ -1,9 +1,7 @@
 @use "../global" as *;
 
 .footer-button__wrapper {
-    // padding-top: rem(40);
     padding-top: vw(375, 40);
-    // padding-bottom: rem(4);
     padding-bottom: vw(375, 4);
     position: relative;
     z-index: 1;

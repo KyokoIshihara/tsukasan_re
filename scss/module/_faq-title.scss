@@ -6,7 +6,6 @@
     @include mq("md") {
         width: calc(262px / $inner * 100%);
         align-items: flex-start;
-        // margin-left: calc(21px / $inner * 100%);
         margin-bottom: min(vw(1366, 87), rem(87));
 
     }
@@ -37,7 +36,6 @@
     @include mq("md") {
         margin-right: min(vw(1366, 10), rem(10));
         position: static;
-        // margin-bottom: rem(10);
     }
 }
 

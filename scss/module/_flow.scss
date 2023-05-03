@@ -19,9 +19,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     @include mq("md"){
-        // width: min(vw(1366, 316.36), rem(316.36));
         width: calc(316.36px / $inner * 100%);
-        // height: min(vw(1366, 241.34), rem(241.34));
         height: calc(241.34px / $inner * 100%);
         position: absolute;
         bottom: 46px;
@@ -33,14 +31,11 @@
 } 
 
 .flow__items {
-    // margin-bottom: max(vw(375, 41), rem(41));
-
     @include mq("md") {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        // margin-bottom: min(vw(1366, 80), rem(80)); 
     }
 }
 
@@ -115,7 +110,7 @@
 .flow__list:nth-of-type(6)::before {
     content: "06";
 }
-    // 
+
 .flow__list::after{
     content: "";
     display: inline-block;
@@ -140,7 +135,6 @@
 .flow__title {
     width: calc(277px / 375px * 100%);
     font-weight: 700;
-    // font-size: max(vw(375, 18), rem(18));
     font-size: rem(18);
     line-height: 136%;
     margin-bottom: max(vw(375, 20), rem(20));
@@ -148,7 +142,6 @@
     align-items: center;
     @include mq("md"){
         width: min(vw(1366, 454), rem(454));
-        // font-size: min(vw(1366, 24), rem(24));
         font-size: rem(24);
         margin-bottom: min(vw(1366, 40), rem(40));
     }
@@ -180,7 +173,6 @@
     line-height: 175%;
     @include mq("md"){
         width: min(vw(1366, 454), rem(454));
-        // font-size: min(vw(1366, 16), rem(16));
         font-size: rem(16);
         margin-bottom: min(vw(1366, 80), rem(80));
     }

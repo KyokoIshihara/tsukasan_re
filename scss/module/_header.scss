@@ -1,7 +1,4 @@
 @use "../global" as *;
-body>* {
-    // border: 1px solid #000;
-}
 
 .header {
     padding-top: 8px;
@@ -14,8 +11,6 @@ body>* {
         position: relative;
         padding-top: 0;
         padding-bottom: 0;
-        // height: vw(1366, 120);
-        // height: 120px;
         height: min(vw(1366, 120), 120px);
     }
 }
@@ -26,10 +21,6 @@ body>* {
     justify-content: space-between;
     align-items: center;
     @include mq("md"){
-        // position: relative;
-        // height: vw(1366, 120);
-        // height: 120px;
-        // height: 100%;
         height: min(vw(1366, 120), 120px);
         width: 100%;
         max-width: 100%;
@@ -47,6 +38,13 @@ body>* {
         height: min(vw(1366, 104), 104px);
         margin-left: vw(1366, 174);
         margin-bottom: max(-18%, -246px);
+    }
+}
+
+.header__logo-link:hover {
+    opacity: unset;
+    @include mq("md"){
+        opacity: 0.8;
     }
 }
 

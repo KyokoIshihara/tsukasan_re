@@ -44,10 +44,6 @@ a {
 	cursor: pointer;
 }
 
-a:hover {
-	 opacity: 0.6;
-}
-
 label, input[type='checkbox'], input[type='submit'] {
 	cursor: pointer;
 }

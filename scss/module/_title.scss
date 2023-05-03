@@ -19,7 +19,6 @@
 
 .title__text {
     font-size: clamp(rem(18), vw(1366, 24), rem(24));
-    // font-size: max(vw(375, 18), rem(18));
     font-weight: bold;
     color: $black;
     display: flex;
@@ -29,7 +28,6 @@
     padding-left: min(vw(375, 20), rem(20));
 
     @include mq("md") {
-        // width: min(vw(1366, 24), rem(24)); 
         line-height: calc(32.69/24);
         margin-top: 15px;
     }
@@ -59,7 +57,6 @@
 
     width: rem(13);
     height: rem(13);
-    // margin-right: rem(15);
     top: 0.7rem;
     @include mq("md"){
         

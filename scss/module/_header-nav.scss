@@ -49,9 +49,7 @@
 
 .header-nav__list:not(:last-of-type) .header-nav__link {
     transform: translateY(35px);
-    // transition: transform 1.5s ease;
     opacity: 0;
-    // transition: transform 2s ease,opacity 2s ease;
     transition-property: transform, opacity;
     transition-duration: 0s;
     transition-delay: unset;
@@ -99,7 +97,6 @@
 
 .header-nav__list:last-of-type .entry-logo-button__link {
     opacity: 0;
-    // 以下調整必要 あたってい無いため
     transition: opacity 2s ease;
     
 }

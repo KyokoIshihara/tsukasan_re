@@ -1,7 +1,5 @@
 @use "../global" as *;
 
-.color {}
-
 .color__inner {
     padding-bottom: max(vw(375, 92), rem(92));
 
@@ -14,8 +12,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    // margin-bottom: rem(80);
-
     @include mq("md") {
         grid-column-gap: calc(39px / $inner * 100%);
         width: 100%;
@@ -50,7 +46,6 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        // display: block;
         width: calc(493px / $inner * 100%);
     }
 }

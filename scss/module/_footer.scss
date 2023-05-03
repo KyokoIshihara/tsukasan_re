@@ -41,15 +41,12 @@
     @include mq("md"){
         padding: 0;
         padding-left: min(vw(1366, 25), rem(25))
-        // display: contents;
     }
 }
 
 .footer__address {
     font-size: rem(13);
-    // padding-top: rem(80);
     padding-top: vw(375, 80);
-    // padding-bottom: rem(80);
     padding-bottom: vw(375, 80);
     background-color: $sub-color;
     background-image: url(../images/footer-bg-SPforGRAY.png);
@@ -65,12 +62,9 @@
 }
 
 .footer__conmpany-name {
-    // font-size: rem(24);
     font-size: max(vw(375, 24), rem(24));
     font-weight: bold;
-    // margin-bottom: rem(40);
     margin-bottom: vw(375, 37);
-    // font-style: normal;
     @include mq("md"){
         font-size: rem(24);
         margin-bottom: rem(78);
@@ -78,7 +72,6 @@
 }
 
 .footer__conpany-address {
-    // margin-bottom: rem(20);
     margin-bottom: vw(375, 20);
     font-size: rem(13);
     line-height: 136%;

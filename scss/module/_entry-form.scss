@@ -42,7 +42,6 @@
 .entry-form__label span {
     font-size: rem(13);
     color: #E82F2A;
-    // margin-left: rem(20);
     margin-left: vw(375, 20);
     @include mq("md"){
         font-size: rem(13);
@@ -62,7 +61,6 @@
         flex-direction: column;
         width: calc(467.18px / 782px * 100%);
         margin-right: min(vw(1366, 57), rem(57));
-        // width: rem(467.18);
     }
 }
 
@@ -103,7 +101,4 @@
     font-size: rem(13);
     margin-bottom: rem(20);
 }
-
-// .entry-form__example span {
-// }
 

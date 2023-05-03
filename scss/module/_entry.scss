@@ -1,14 +1,5 @@
 @use "../global" as *;
 
-.entry {
-    // position: relative;
-    @include mq("md"){
-        // position: static;
-        // overflow-x: hidden;
-    }
-
-}
-
 .entry__inner {
     width: vw(375, 343);
     padding-top: max(vw(375, 75), rem(75));
@@ -21,7 +12,6 @@
     @include mq("md") {
         width: 100%;
         max-width: 1026px;
-        // width: min(vw(1366, 1026), rem(1026));
         border-radius: 0 100px 0 100px;
         padding-top: rem(152);
         padding-bottom: rem(160);
@@ -58,9 +48,7 @@
 .entry__content-container {
     width: vw(375, 301.2);
     @include mq("md"){
-        // width: min(vw(1366, 680), rem(680));
         width: 100%;
-        // margin: 0 auto;
         padding-left: min(vw(1366, 100), rem(100));
         padding-right: min(vw(1366, 94), rem(94));
     }

@@ -1,7 +1,6 @@
 @use "../global" as *;
 
 .pickup-title {
-    // width: vw(375, 296);
     margin-bottom: 0;
 
     @include mq("md") {
@@ -20,9 +19,7 @@
     @include mq("md") {
         all: unset;
         width: calc(136px / 171px * 100%);
-        // width: min(vw(1366, 136), rem(136));
         margin-bottom: rem(-9);
-        // margin-right: calc(19px / 171px *100%);
     }
 }
 
