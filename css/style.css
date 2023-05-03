@@ -3083,6 +3083,7 @@ address {
   display: inline;
   text-decoration: underline;
   text-underline-offset: 4px;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .privacy__link {

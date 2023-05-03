@@ -27,6 +27,7 @@
     display: inline;
     text-decoration: underline;
     text-underline-offset: 4px;
+    cursor: pointer;
     @include mq("md"){
         text-underline-offset: 7px;
         font-size: clamp(rem(13), vw(1366, 16), rem(16));
