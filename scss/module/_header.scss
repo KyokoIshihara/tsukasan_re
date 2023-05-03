@@ -42,9 +42,8 @@
 }
 
 .header__logo-link:hover {
-    opacity: unset;
     @include mq("md"){
-        opacity: 0.8;
+        opacity: unset;
     }
 }
 
